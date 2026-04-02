@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Does My Phone Always Forget I Want Speaker? | ux-natesmitty1738</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+
+    /* ── Main content ── */
+    .page-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 30px 60px;
+    }
+
+    .journal-label {
+      font-size: 0.85rem;
+      color: #828282;
+      margin-bottom: 6px;
+    }
+    h1.post-title {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .post-meta {
+      font-size: 0.85rem;
+      color: #828282;
+      margin-bottom: 32px;
+    }
+    hr.title-rule {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 36px 0 4px;
+    }
+    hr.section-rule {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin-bottom: 20px;
+    }
+
+    p { margin-bottom: 16px; }
+
+    /* ── Images ── */
+    figure { margin: 0; }
+    figcaption {
+      font-size: 0.82rem;
+      color: #828282;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* Single inline float */
+    .img-float {
+      float: right;
+      width: 220px;
+      margin: 0 0 20px 28px;
+    }
+    .img-float img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+    }
+
+    /* Side-by-side pair */
+    .img-pair {
+      display: flex;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .img-pair figure {
+      flex: 1;
+    }
+    .img-pair img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+    }
+
+    .clearfix::after { content: ""; display: table; clear: both; }
+
+    /* Bullet lists */
+    ul.post-list {
+      margin: 0 0 20px 20px;
+    }
+    ul.post-list li {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 600px) {
+      h1.post-title { font-size: 1.5rem; }
+      .img-float { float: none; width: 100%; margin: 16px 0; }
+      .img-pair { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+
+<main class="page-content">
+
+  <p class="journal-label">User eXperience Journal</p>
+  <h1 class="post-title">Why Does My Phone Always Forget I Want Speaker?</h1>
+  <p class="post-meta">April 1, 2026 &nbsp;·&nbsp; Nate Smith</p>
+  <hr class="title-rule">
+
+  <h2>The Interaction</h2>
+  <hr class="section-rule">
+
+  <div class="clearfix">
+    <figure class="img-float">
+      <img src="../assets/images/audio-button.png" alt="iPhone in-call screen with the Audio button showing an AirPods icon, indicating AirPods are the active output">
+      <figcaption>The Audio button mid-call. The AirPods icon tells me it already chose wrong.</figcaption>
+    </figure>
+
+    <p>
+      I get calls all the time from family and friends. Almost every time, the same thing happens.
+      I answer and the audio is already going somewhere I didn't pick. My AirPods, my MacBook, whatever
+      happened to be connected last. The other person starts talking and I can't hear them. I have to say
+      "hold on, one second" before we even get started, just to switch the audio output. Every call.
+    </p>
+    <p>
+      The situation that gets me most: my AirPods are sitting on the desk, still connected from earlier.
+      My phone rings, iOS sees them connected, and routes the call there. I want it on speaker so I can
+      move around. I've made that exact switch more times than I can count and the phone has no memory of it.
+    </p>
+  </div>
+
+  <h2>The Button I Shouldn't Have to Press</h2>
+  <hr class="section-rule">
+
+  <p>
+    The in-call screen has an "audio" button that opens a small dropdown with all your output options.
+    A checkmark shows which one is active. On the left below, you can see AirPods were auto-selected.
+    On the right, I've already switched to iPhone.
+  </p>
+
+  <div class="img-pair">
+    <figure>
+      <img src="../assets/images/airpods-selected.png" alt="Audio dropdown showing AirPods Pro #2 selected with a checkmark">
+      <figcaption>What I see every time. AirPods auto-selected.</figcaption>
+    </figure>
+    <figure>
+      <img src="../assets/images/iphone-selected.png" alt="Audio dropdown showing iPhone selected with a checkmark after switching">
+      <figcaption>After switching manually. Same thing, every call.</figcaption>
+    </figure>
+  </div>
+
+  <p>
+    The core problem is a broken mental model, which is the expectation you build in
+    your head for how something should work. My phone learns my schedule, suggests apps by location, and
+    autocorrects my typing. So I expect it to notice I switch audio outputs on every call. It doesn't.
+    It just picks whatever Bluetooth device connected most recently.
+  </p>
+  <p>
+    That's a default behavior issue. A default is what a system does when it hasn't
+    been told otherwise. The iOS default is to route calls to the most recently connected Bluetooth device.
+    That rule makes sense in some situations, but it completely ignores any pattern of behavior I've built up.
+  </p>
+  <p>
+    Steve Krug writes in <em>Don't Make Me Think</em> that users tend to satisfice,
+    meaning they pick the first good-enough option rather than hunting for a perfect one. That's exactly
+    what I do. I switch to speaker and move on. The problem is that even if I wanted a real fix, there
+    isn't one. iOS has no setting for a default call audio output.
+  </p>
+  <p>
+    There's also a feedback problem. Feedback is how a system tells you what it's doing.
+    There's no warning before I answer showing which output will be active. I only find out once the call
+    connects and I can't hear anything.
+  </p>
+
+  <h2>The Pattern It Never Learned</h2>
+  <hr class="section-rule">
+
+  <p>
+    After months of this, I started noticing that my iPhone learns plenty of other things. Focus modes
+    switch automatically by time of day. Siri suggests apps before I open them. The capability exists.
+    It just isn't applied here.
+  </p>
+  <p>
+    Krug also talks about how users muddle through, meaning they figure things out by
+    trial and error rather than reading instructions or digging into settings. That's the whole story of
+    this interaction. I never went looking for a fix. I just kept correcting it each time and moved on.
+  </p>
+
+  <h2>What Works</h2>
+  <hr class="section-rule">
+
+  <ul class="post-list">
+    <li>The audio menu is easy to find and the options are clearly labeled</li>
+    <li>Switching only takes a few taps once you know where to look</li>
+  </ul>
+
+  <h2>How It Could Be Better</h2>
+  <hr class="section-rule">
+
+  <p>
+    The fix seems obvious. Let users set a default audio output for calls, or have the phone learn from
+    repeated behavior. iOS already tracks location and usage patterns for other features. Applying that
+    same logic here would solve the problem without any new technology.
+  </p>
+
+</main>
+
+
+</body>
+</html>
