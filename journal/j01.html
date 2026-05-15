@@ -56,6 +56,7 @@
     }
 
     p { margin-bottom: 16px; }
+    strong { font-weight: 700; }
 
     /* ── Images ── */
     figure { margin: 0; }
@@ -107,6 +108,12 @@
       margin-bottom: 6px;
     }
 
+    /* UX vocabulary (rubric: terms visible + explained) */
+    main strong {
+      font-weight: 700;
+      color: #0a0a0a;
+    }
+
     @media (max-width: 600px) {
       h1.post-title { font-size: 1.5rem; }
       .img-float { float: none; width: 100%; margin: 16px 0; }
@@ -134,25 +141,58 @@
     </figure>
 
     <p>
-      I get calls all the time from family and friends. Almost every time, the same thing happens.
-      I answer and the audio is already going somewhere I didn't pick. My AirPods, my MacBook, whatever
-      happened to be connected last. The other person starts talking and I can't hear them. I have to say
-      "hold on, one second" before we even get started, just to switch the audio output. Every call.
+      Here is the scenario I keep living, step by step. My AirPods are still paired from earlier, but they are
+      sitting on my desk in the case (or they are in the room, not in my ears). A family member calls. My goal is
+      simple: answer on speaker so I can walk to the kitchen while we talk. I swipe to answer the
+      way I always do. The call connects, I lift the phone to my ear out of habit, and I hear silence—or a tiny
+      far-away sound—because the audio already went to the AirPods I am not wearing. The caller says “hello?”
+      twice while I scramble: I tap the in-call <strong>Audio</strong> control, pick <strong>iPhone</strong> or
+      <strong>Speaker</strong> from the sheet, then apologize and ask them to start again.
     </p>
     <p>
-      The situation that gets me most: my AirPods are sitting on the desk, still connected from earlier.
-      My phone rings, iOS sees them connected, and routes the call there. I want it on speaker so I can
-      move around. I've made that exact switch more times than I can count and the phone has no memory of it.
+      The explicit problem is not “Bluetooth is annoying.” It is that <strong>iOS chooses a call audio route for
+      me</strong> based mainly on what was last connected, routes it to hardware I am not actually listening through,
+      and does not confirm that choice before I commit to answering. I pay the cost in the first ten seconds of
+      almost every call: social awkwardness, repeated micro-interruptions, and the feeling that the phone ignored the
+      way I <em>always</em> finish the same correction afterward.
     </p>
   </div>
+
+  <h2>Which UX Principles This Breaks</h2>
+  <hr class="section-rule">
+
+  <p>
+      One way to name what feels wrong is Nielsen’s heuristic <strong>visibility of system status</strong>: people
+      should be able to tell what the system is about to do <em>before</em> it matters. On a call, “status” includes
+      where the voice will play. I get almost no <strong>feedback</strong>—information returned about what the phone
+      is doing—until after I have already answered. A small pre-answer indicator (“Audio: AirPods”) would at least
+      let me fix the route before the other person starts talking.
+    </p>
+  <p>
+      The deeper clash is between my <strong>mental model</strong>—the story I tell myself about how my phone
+      behaves—and the system’s real rule set, which designers call the <strong>conceptual model</strong> users are
+      supposed to infer. My mental model is: “If I am holding the phone like a phone, and the buds are not in my
+      ears, sound should come from the handset or speaker unless I say otherwise.” iOS’s conceptual model here is
+      closer to: “Prefer the most recently connected Bluetooth sink.” Those two stories disagree, and because the
+      system never surfaces its rule, I cannot align my expectations without getting burned first.
+    </p>
+  <p>
+      That ties to <strong>user control and freedom</strong> (another Nielsen heuristic): I need a dependable way to
+      steer outcomes, not just recover from them. The audio sheet gives me control <em>after</em> the mistake, but
+      there is no durable <strong>default</strong>—the path the product takes when I have not specified a preference—for
+      “always start calls on iPhone/speaker.” That misses a chance for <strong>error prevention</strong>, Nielsen’s term
+      for stopping mistakes before they happen. Wrong-route audio is a predictable, high-frequency slip; a smarter
+      default or a pre-answer confirmation would prevent it instead of letting it repeat.
+    </p>
 
   <h2>The Button I Shouldn't Have to Press</h2>
   <hr class="section-rule">
 
   <p>
-    The in-call screen has an "audio" button that opens a small dropdown with all your output options.
-    A checkmark shows which one is active. On the left below, you can see AirPods were auto-selected.
-    On the right, I've already switched to iPhone.
+    Once I am stuck in the wrong route, the in-call screen’s Audio button opens a small menu of outputs; a checkmark
+    marks the active device. Below, the left screenshot is what I see immediately: <strong>AirPods</strong> already
+    selected. The right screenshot is after I manually move the call back to the iPhone. Same two taps, same
+    apology, same dance—call after call.
   </p>
 
   <div class="img-pair">
@@ -167,57 +207,41 @@
   </div>
 
   <p>
-    The core problem is a broken mental model, which is the expectation you build in
-    your head for how something should work. My phone learns my schedule, suggests apps by location, and
-    autocorrects my typing. So I expect it to notice I switch audio outputs on every call. It doesn't.
-    It just picks whatever Bluetooth device connected most recently.
-  </p>
-  <p>
-    That's a default behavior issue. A default is what a system does when it hasn't
-    been told otherwise. The iOS default is to route calls to the most recently connected Bluetooth device.
-    That rule makes sense in some situations, but it completely ignores any pattern of behavior I've built up.
-  </p>
-  <p>
-    Steve Krug writes in <em>Don't Make Me Think</em> that users tend to satisfice,
-    meaning they pick the first good-enough option rather than hunting for a perfect one. That's exactly
-    what I do. I switch to speaker and move on. The problem is that even if I wanted a real fix, there
-    isn't one. iOS has no setting for a default call audio output.
-  </p>
-  <p>
-    There's also a feedback problem. Feedback is how a system tells you what it's doing.
-    There's no warning before I answer showing which output will be active. I only find out once the call
-    connects and I can't hear anything.
-  </p>
+      Steve Krug’s idea of <strong>satisficing</strong> fits what I do next: I do not hunt for a perfect long-term
+      fix; I grab the first good-enough patch (switch audio, move on). In <em>Don’t Make Me Think</em>, he also
+      describes <strong>muddling through</strong>—people stumbling forward with trial and error instead of reading
+      manuals. That is me with this bug. I never filed a structured complaint; I just learned the tap sequence by
+      repetition. The product trained me to cope instead of meeting my goal on the first try.
+    </p>
 
   <h2>The Pattern It Never Learned</h2>
   <hr class="section-rule">
 
   <p>
-    After months of this, I started noticing that my iPhone learns plenty of other things. Focus modes
-    switch automatically by time of day. Siri suggests apps before I open them. The capability exists.
-    It just isn't applied here.
-  </p>
-  <p>
-    Krug also talks about how users muddle through, meaning they figure things out by
-    trial and error rather than reading instructions or digging into settings. That's the whole story of
-    this interaction. I never went looking for a fix. I just kept correcting it each time and moved on.
+    The part that makes the broken <strong>mental model</strong> sting is inconsistency with the rest of the OS.
+    My iPhone clearly <strong>learns patterns</strong> elsewhere—Focus modes flip by time of day; Siri surfaces apps
+    before I open them—so my expectation that it would notice “Nate always moves calls off the desk AirPods” is not
+    magical thinking; it matches how Apple already sells the device. Applying that same adaptability to call audio
+    would narrow the gap between my expectations and the phone’s actual <strong>conceptual model</strong>.
   </p>
 
   <h2>What Works</h2>
   <hr class="section-rule">
 
   <ul class="post-list">
-    <li>The audio menu is easy to find and the options are clearly labeled</li>
-    <li>Switching only takes a few taps once you know where to look</li>
+    <li><strong>Discoverability</strong> is fine: once I know the sheet exists, the labels are clear and the targets are big enough to hit under stress</li>
+    <li>After the wrong <strong>default</strong>, <strong>recovering from the error</strong> is quick—few taps, no deep settings maze</li>
   </ul>
 
   <h2>How It Could Be Better</h2>
   <hr class="section-rule">
 
   <p>
-    The fix seems obvious. Let users set a default audio output for calls, or have the phone learn from
-    repeated behavior. iOS already tracks location and usage patterns for other features. Applying that
-    same logic here would solve the problem without any new technology.
+    A stronger design would combine clearer <strong>visibility of system status</strong> (show the upcoming route on
+    the incoming-call screen), a user-set <strong>default</strong> for call audio, and optional learning from
+    repeated corrections so the system’s <strong>conceptual model</strong> matches real listening context—not just
+    “last Bluetooth device connected.” That would respect <strong>user control</strong> and cut down the
+    conversation-starting failures I described at the top.
   </p>
 
 </main>
