@@ -141,20 +141,20 @@
     </figure>
 
     <p>
-      Here is the scenario I keep living, step by step. My AirPods are still paired from earlier, but they are
-      sitting on my desk in the case (or they are in the room, not in my ears). A family member calls. My goal is
-      simple: answer on speaker so I can walk to the kitchen while we talk. I swipe to answer the
-      way I always do. The call connects, I lift the phone to my ear out of habit, and I hear silence, or a tiny
-      far-away sound, because the audio already went to the AirPods I am not wearing. The caller says “hello?”
-      twice while I scramble: I tap the in-call <strong>Audio</strong> control, pick <strong>iPhone</strong> or
+      Here is the scenario I keep reliving, step by step. My AirPods are still paired from earlier, but they are
+      sitting on my desk in the case, or they are somewhere in the room and not in my ears. A family member calls.
+      My goal is simple: answer on speaker so I can walk to the kitchen while we talk. I swipe to answer the way I
+      always do. The call connects, I lift the phone to my ear out of habit, and I hear silence, or a tiny, faraway
+      sound, because the audio has already gone to the AirPods I am not wearing. The caller says “hello?” twice while
+      I scramble: I tap the in-call <strong>Audio</strong> control, pick <strong>iPhone</strong> or
       <strong>Speaker</strong> from the sheet, then apologize and ask them to start again.
     </p>
     <p>
-      The explicit problem is not “Bluetooth is annoying.” It is that <strong>iOS chooses a call audio route for
-      me</strong> based mainly on what was last connected, routes it to hardware I am not actually listening through,
-      and does not confirm that choice before I commit to answering. I pay the cost in the first ten seconds of
-      almost every call: social awkwardness, repeated micro-interruptions, and the feeling that the phone ignored the
-      way I <em>always</em> finish the same correction afterward.
+      The problem is not simply “Bluetooth is annoying.” It is that <strong>iOS chooses a call audio route for
+      me</strong>, mainly based on what was last connected, routes the call to hardware I am not actually listening
+      through, and does not confirm that choice before I answer. I pay the cost in the first ten seconds of almost
+      every call: social awkwardness, repeated micro-interruptions, and the feeling that the phone ignored the fact
+      that I <em>always</em> make the same correction afterward.
     </p>
   </div>
 
@@ -162,36 +162,36 @@
   <hr class="section-rule">
 
   <p>
-      One way to name what feels wrong is Nielsen’s heuristic <strong>visibility of system status</strong>: people
-      should be able to tell what the system is about to do <em>before</em> it matters. On a call, “status” includes
-      where the voice will play. I get almost no <strong>feedback</strong> (information returned about what the phone
-      is doing) until after I have already answered. A small pre-answer indicator (“Audio: AirPods”) would at least
-      let me fix the route before the other person starts talking.
-    </p>
+    One way to describe what feels wrong is Nielsen’s heuristic <strong>visibility of system status</strong>: people
+    should be able to tell what the system is about to do <em>before</em> it matters. On a call, “status” includes
+    where the voice will play. I get almost no <strong>feedback</strong> (information returned about what the phone
+    is doing) until after I have already answered. A small pre-answer indicator, such as “Audio: AirPods,” would at
+    least let me fix the route before the other person starts talking.
+  </p>
   <p>
-      The deeper clash is between my <strong>mental model</strong> (the story I tell myself about how my phone
-      behaves) and the system’s real rule set, which designers call the <strong>conceptual model</strong> users are
-      supposed to infer. My mental model is: “If I am holding the phone like a phone, and the buds are not in my
-      ears, sound should come from the handset or speaker unless I say otherwise.” iOS’s conceptual model here is
-      closer to: “Prefer the most recently connected Bluetooth sink.” Those two stories disagree, and because the
-      system never surfaces its rule, I cannot align my expectations without getting burned first.
-    </p>
+    The deeper clash is between my <strong>mental model</strong> (the story I tell myself about how my phone
+    behaves) and the system’s actual rule set, which designers call the <strong>conceptual model</strong> users are
+    supposed to infer. My mental model is: “If I am holding the phone like a phone, and the buds are not in my
+    ears, sound should come from the handset or speaker unless I say otherwise.” iOS’s conceptual model here is
+    closer to: “Prefer the most recently connected Bluetooth sink.” Those two stories disagree, and because the
+    system never surfaces its rule, I cannot align my expectations without getting burned first.
+  </p>
   <p>
-      That ties to <strong>user control and freedom</strong> (another Nielsen heuristic): I need a dependable way to
-      steer outcomes, not just recover from them. The audio sheet gives me control <em>after</em> the mistake, but
-      there is no durable <strong>default</strong> (the path the product takes when I have not specified a preference) for
-      “always start calls on iPhone/speaker.” That misses a chance for <strong>error prevention</strong>, Nielsen’s term
-      for stopping mistakes before they happen. Wrong-route audio is a predictable, high-frequency slip; a smarter
-      default or a pre-answer confirmation would prevent it instead of letting it repeat.
-    </p>
+    That connects to <strong>user control and freedom</strong> (another Nielsen heuristic): I need a dependable way to
+    steer outcomes, not just recover from them. The audio sheet gives me control <em>after</em> the mistake, but
+    there is no durable <strong>default</strong> (the path the product takes when I have not specified a preference)
+    for “always start calls on iPhone/speaker.” That misses a chance for <strong>error prevention</strong>, Nielsen’s
+    term for stopping mistakes before they happen. Wrong-route audio is a predictable, high-frequency slip; a smarter
+    default or a pre-answer confirmation would prevent it instead of letting it repeat.
+  </p>
 
   <h2>The Button I Shouldn't Have to Press</h2>
   <hr class="section-rule">
 
   <p>
-    Once I am stuck in the wrong route, the in-call screen’s Audio button opens a small menu of outputs; a checkmark
-    marks the active device. Below, the left screenshot is what I see immediately: <strong>AirPods</strong> already
-    selected. The right screenshot is after I manually move the call back to the iPhone. Same two taps, same
+    Once I am stuck in the wrong route, the in-call screen’s Audio button opens a small menu of outputs, with a
+    checkmark marking the active device. Below, the left screenshot is what I see immediately: <strong>AirPods</strong>
+    already selected. The right screenshot is after I manually move the call back to the iPhone. Same two taps, same
     apology, same dance, call after call.
   </p>
 
@@ -207,40 +207,41 @@
   </div>
 
   <p>
-      Steve Krug’s idea of <strong>satisficing</strong> fits what I do next: I do not hunt for a perfect long-term
-      fix; I grab the first good-enough patch (switch audio, move on). In <em>Don’t Make Me Think</em>, he also
-      describes <strong>muddling through</strong>: people stumbling forward with trial and error instead of reading
-      manuals. That is me with this bug. I never filed a structured complaint; I just learned the tap sequence by
-      repetition. The product trained me to cope instead of meeting my goal on the first try.
-    </p>
+    Steve Krug’s idea of <strong>satisficing</strong> fits what I do next: I do not hunt for a perfect long-term
+    fix; I grab the first good-enough patch by switching the audio and moving on. In <em>Don’t Make Me Think</em>,
+    he also describes <strong>muddling through</strong>: people stumble forward through trial and error instead of
+    reading manuals. That is me with this bug. I never filed a structured complaint; I just learned the tap sequence
+    through repetition. The product trained me to cope instead of meeting my goal on the first try.
+  </p>
 
   <h2>The Pattern It Never Learned</h2>
   <hr class="section-rule">
 
   <p>
-    The part that makes the broken <strong>mental model</strong> sting is inconsistency with the rest of the OS.
-    My iPhone clearly <strong>learns patterns</strong> elsewhere. Focus modes flip by time of day; Siri surfaces apps
-    before I open them. So my expectation that it would notice “Nate always moves calls off the desk AirPods” is not
-    magical thinking; it matches how Apple already sells the device. Applying that same adaptability to call audio
-    would narrow the gap between my expectations and the phone’s actual <strong>conceptual model</strong>.
+    The part that makes the broken <strong>mental model</strong> sting is how inconsistent it feels with the rest of
+    the OS. My iPhone clearly <strong>learns patterns</strong> elsewhere. Focus modes flip by time of day; Siri
+    surfaces apps before I open them. So my expectation that it would notice “Nate always moves calls off the desk
+    AirPods” is not magical thinking; it matches how Apple already presents the device. Applying that same
+    adaptability to call audio would narrow the gap between my expectations and the phone’s actual
+    <strong>conceptual model</strong>.
   </p>
 
   <h2>What Works</h2>
   <hr class="section-rule">
 
   <ul class="post-list">
-    <li><strong>Discoverability</strong> is fine: once I know the sheet exists, the labels are clear and the targets are big enough to hit under stress</li>
-    <li>After the wrong <strong>default</strong>, <strong>recovering from the error</strong> is quick: few taps, no deep settings maze</li>
+    <li><strong>Discoverability</strong> is fine: once I know the sheet exists, the labels are clear and the targets are big enough to hit under stress.</li>
+    <li>After the wrong <strong>default</strong>, <strong>recovering from the error</strong> is quick: a few taps, with no deep settings maze.</li>
   </ul>
 
   <h2>How It Could Be Better</h2>
   <hr class="section-rule">
 
   <p>
-    A stronger design would combine clearer <strong>visibility of system status</strong> (show the upcoming route on
-    the incoming-call screen), a user-set <strong>default</strong> for call audio, and optional learning from
+    A stronger design would combine clearer <strong>visibility of system status</strong> by showing the upcoming
+    route on the incoming-call screen, a user-set <strong>default</strong> for call audio, and optional learning from
     repeated corrections so the system’s <strong>conceptual model</strong> matches real listening context, not just
-    “last Bluetooth device connected.” That would respect <strong>user control</strong> and cut down the
+    “last Bluetooth device connected.” That would respect <strong>user control</strong> and cut down on the
     conversation-starting failures I described at the top.
   </p>
 
